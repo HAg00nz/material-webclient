@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Sidebar from "@/components/shared/sidebar/sidebar"
+import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeSwitcher } from "@/components/shared/theme-switcher"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -18,12 +20,24 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${inter.className}`}>
-        <main className='flex h-screen w-screen'>
-          <div>
-            <Sidebar />
-          </div>
-          <div className='p-5'>{children}</div>
-        </main>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className='flex h-screen w-screen'>
+            <div>
+              <div className='absolute right-5 top-5'>
+                <ThemeSwitcher />
+              </div>
+              <div className=''>
+                <Sidebar />
+              </div>
+            </div>
+            <div className='p-5'>{children}</div>
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   )

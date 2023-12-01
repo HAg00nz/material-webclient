@@ -10,7 +10,7 @@ const BottomMenu = () => {
         <HiOutlineUser />
         Profile
       </div>
-      <div className='flex items-center gap-1'>
+      <div className='flex items-center gap-1 mt-1'>
         <HiOutlineCog />
         Settings
       </div>

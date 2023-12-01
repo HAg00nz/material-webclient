@@ -8,7 +8,7 @@ const Tools = () => {
   return (
     <>
       <Separator />
-      <div className='flex gap-1 my-2 justify-center'>
+      <div className='flex gap-5 my-2 justify-center'>
         <Button variant='outline'>
           <SlPrinter />
         </Button>

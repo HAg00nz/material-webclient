@@ -14,15 +14,19 @@ import { precoLinks } from "./menuitems/precolinks"
 import { sthLinks } from "./menuitems/sthlinks"
 import { valsverkLinks } from "./menuitems/valsverklinks"
 import { vbhLinks } from "./menuitems/vbhlinks"
-
+import classNames from "classnames"
+import { usePathname } from "next/navigation"
 import MenuItem from "./menuitem"
+
 const MainMenu = () => {
+  const currentPath = usePathname()
+
   return (
     <div>
       <ul>
         {mainmenuLinks.map((menuitem) => (
           <MenuItem
-            key={menuitem.key}
+            key={menuitem.id}
             name={menuitem.name}
             href={menuitem.href}
           />
@@ -35,7 +39,7 @@ const MainMenu = () => {
             <ul>
               {ceaxLinks.map((menuitem) => (
                 <MenuItem
-                  key={menuitem.key}
+                  key={menuitem.id}
                   name={menuitem.name}
                   href={menuitem.href}
                 />
@@ -49,7 +53,7 @@ const MainMenu = () => {
             <ul>
               {draproLinks.map((menuitem) => (
                 <MenuItem
-                  key={menuitem.key}
+                  key={menuitem.id}
                   name={menuitem.name}
                   href={menuitem.href}
                 />
@@ -63,7 +67,7 @@ const MainMenu = () => {
             <ul>
               {pebaLinks.map((menuitem) => (
                 <MenuItem
-                  key={menuitem.key}
+                  key={menuitem.id}
                   name={menuitem.name}
                   href={menuitem.href}
                 />
@@ -76,7 +80,7 @@ const MainMenu = () => {
           <AccordionContent>
             {precoLinks.map((menuitem) => (
               <MenuItem
-                key={menuitem.key}
+                key={menuitem.id}
                 name={menuitem.name}
                 href={menuitem.href}
               />
@@ -88,7 +92,7 @@ const MainMenu = () => {
           <AccordionContent>
             {vbhLinks.map((menuitem) => (
               <MenuItem
-                key={menuitem.key}
+                key={menuitem.id}
                 name={menuitem.name}
                 href={menuitem.href}
               />
@@ -100,7 +104,7 @@ const MainMenu = () => {
           <AccordionContent>
             {sthLinks.map((menuitem) => (
               <MenuItem
-                key={menuitem.key}
+                key={menuitem.id}
                 name={menuitem.name}
                 href={menuitem.href}
               />
@@ -112,7 +116,7 @@ const MainMenu = () => {
           <AccordionContent>
             {valsverkLinks.map((menuitem) => (
               <MenuItem
-                key={menuitem.key}
+                key={menuitem.id}
                 name={menuitem.name}
                 href={menuitem.href}
               />
@@ -124,7 +128,7 @@ const MainMenu = () => {
           <AccordionContent>
             {abhLinks.map((menuitem) => (
               <MenuItem
-                key={menuitem.key}
+                key={menuitem.id}
                 name={menuitem.name}
                 href={menuitem.href}
               />

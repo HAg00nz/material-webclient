@@ -1,5 +1,5 @@
 export const valsverkLinks = [
-  { key: 61, name: "Dashboard", href: "/valsverk" },
-  { key: 62, name: "Production plan", href: "/valsverk/pplan" },
-  { key: 63, name: "Machine status", href: "/valsverk/mstatus" },
+  { id: 61, name: "Dashboard", href: "/valsverk" },
+  { id: 62, name: "Production plan", href: "/valsverk/pplan" },
+  { id: 63, name: "Machine status", href: "/valsverk/mstatus" },
 ]

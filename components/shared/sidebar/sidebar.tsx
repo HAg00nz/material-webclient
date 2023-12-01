@@ -5,7 +5,7 @@ import BottomMenu from "./bottommenu"
 
 const Sidebar = () => {
   return (
-    <div className='flex flex-col h-screen w-[220px] p-5'>
+    <div className='flex flex-col h-screen w-[220px] p-5 bg-[#011627] text-white'>
       <div>
         <Logotype />
       </div>
