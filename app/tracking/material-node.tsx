@@ -1,15 +1,15 @@
-import { MaterialDto } from "@/api/dto/material.dto"
-import { Button } from "@/components/ui/button"
+import { MaterialDto } from '@/api/dto/material.dto'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Handle, NodeProps, Position } from "reactflow"
-import { MdArrowCircleDown } from "react-icons/md"
-import { MdArrowCircleUp } from "react-icons/md"
+} from '@/components/ui/card'
+import { Handle, NodeProps, Position } from 'reactflow'
+import { MdArrowCircleDown } from 'react-icons/md'
+import { MdArrowCircleUp } from 'react-icons/md'
 
 export interface MaterialNodeProps {
   material: MaterialDto
@@ -42,7 +42,7 @@ export function MaterialNode(props: NodeProps<MaterialNodeProps>) {
                 props.data.onNavChildren(props.data.material.materialId)
               }}
             >
-              <MdArrowCircleUp className='text-2xl' />
+              <MdArrowCircleDown className='text-2xl' />
             </Button>
           </CardContent>
         </div>
