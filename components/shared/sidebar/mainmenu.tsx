@@ -1,22 +1,22 @@
-"use client"
+'use client'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-import { mainmenuLinks } from "./menuitems/mainmenulinks"
-import { abhLinks } from "./menuitems/abhlinks"
-import { ceaxLinks } from "./menuitems/ceaxlinks"
-import { draproLinks } from "./menuitems/draprolinks"
-import { pebaLinks } from "./menuitems/pebalinks"
-import { precoLinks } from "./menuitems/precolinks"
-import { sthLinks } from "./menuitems/sthlinks"
-import { valsverkLinks } from "./menuitems/valsverklinks"
-import { vbhLinks } from "./menuitems/vbhlinks"
-import classNames from "classnames"
-import { usePathname } from "next/navigation"
-import MenuItem from "./menuitem"
+} from '@/components/ui/accordion'
+import { mainmenuLinks } from './menuitems/mainmenulinks'
+import { abhLinks } from './menuitems/abhlinks'
+import { ceaxLinks } from './menuitems/ceaxlinks'
+import { draproLinks } from './menuitems/draprolinks'
+import { pebaLinks } from './menuitems/pebalinks'
+import { precoLinks } from './menuitems/precolinks'
+import { sthLinks } from './menuitems/sthlinks'
+import { valsverkLinks } from './menuitems/valsverklinks'
+import { vbhLinks } from './menuitems/vbhlinks'
+import classnames from 'classnames'
+import { usePathname } from 'next/navigation'
+import MenuItem from './menuitem'
 
 const MainMenu = () => {
   const currentPath = usePathname()
@@ -29,6 +29,9 @@ const MainMenu = () => {
             key={menuitem.id}
             name={menuitem.name}
             href={menuitem.href}
+            classes={classnames({
+              'font-bold text-[#f26602]': currentPath === menuitem.href,
+            })}
           />
         ))}
       </ul>
@@ -42,6 +45,9 @@ const MainMenu = () => {
                   key={menuitem.id}
                   name={menuitem.name}
                   href={menuitem.href}
+                  classes={classnames({
+                    'font-bold text-[#f26602]': currentPath === menuitem.href,
+                  })}
                 />
               ))}
             </ul>
@@ -56,6 +62,9 @@ const MainMenu = () => {
                   key={menuitem.id}
                   name={menuitem.name}
                   href={menuitem.href}
+                  classes={classnames({
+                    'font-bold text-[#f26602]': currentPath === menuitem.href,
+                  })}
                 />
               ))}
             </ul>
@@ -70,6 +79,9 @@ const MainMenu = () => {
                   key={menuitem.id}
                   name={menuitem.name}
                   href={menuitem.href}
+                  classes={classnames({
+                    'font-bold text-[#f26602]': currentPath === menuitem.href,
+                  })}
                 />
               ))}
             </ul>
@@ -83,6 +95,9 @@ const MainMenu = () => {
                 key={menuitem.id}
                 name={menuitem.name}
                 href={menuitem.href}
+                classes={classnames({
+                  'font-bold text-[#f26602]': currentPath === menuitem.href,
+                })}
               />
             ))}
           </AccordionContent>
@@ -95,6 +110,9 @@ const MainMenu = () => {
                 key={menuitem.id}
                 name={menuitem.name}
                 href={menuitem.href}
+                classes={classnames({
+                  'font-bold text-[#f26602]': currentPath === menuitem.href,
+                })}
               />
             ))}
           </AccordionContent>
@@ -107,6 +125,9 @@ const MainMenu = () => {
                 key={menuitem.id}
                 name={menuitem.name}
                 href={menuitem.href}
+                classes={classnames({
+                  'font-bold text-[#f26602]': currentPath === menuitem.href,
+                })}
               />
             ))}
           </AccordionContent>
@@ -119,6 +140,9 @@ const MainMenu = () => {
                 key={menuitem.id}
                 name={menuitem.name}
                 href={menuitem.href}
+                classes={classnames({
+                  'font-bold text-[#f26602]': currentPath === menuitem.href,
+                })}
               />
             ))}
           </AccordionContent>
@@ -131,6 +155,9 @@ const MainMenu = () => {
                 key={menuitem.id}
                 name={menuitem.name}
                 href={menuitem.href}
+                classes={classnames({
+                  'font-bold text-[#f26602]': currentPath === menuitem.href,
+                })}
               />
             ))}
           </AccordionContent>

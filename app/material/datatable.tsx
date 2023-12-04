@@ -38,8 +38,8 @@ export function DataTable<TData, TValue>({
   data,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([])
-  const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({})
+  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({})
+  const [pageSize, setPageSize] = React.useState<number>(26)
   const table = useReactTable({
     data,
     columns,
@@ -53,6 +53,10 @@ export function DataTable<TData, TValue>({
       columnVisibility,
     },
   })
+  
+  React.useEffect(() => {
+    table.setPageSize(pageSize);
+  }, [pageSize, table]);
 
   return (
     <div>
